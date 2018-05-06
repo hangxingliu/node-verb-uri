@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  # - '4' nodejs4 doesn't support destructuring
+  - '6'
+  - '8'
+  - 'node'
+
+before_script:
+  - npm install mocha -g
+
+notifications:
+  email: false
