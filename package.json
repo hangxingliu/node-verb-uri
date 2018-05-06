@@ -1,0 +1,29 @@
+{
+  "name": "verb-uri",
+  "version": "1.0.0",
+  "description": "A verb URI parse and stringify Node.js module",
+  "main": "index.js",
+  "devDependencies": {
+    "@hangxingliu/assert": "^0.1.1",
+    "@types/node": "^10.0.4",
+    "mocha": "^5.1.1"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hangxingliu/node-verb-uri.git"
+  },
+  "keywords": [
+    "http",
+    "uri",
+    "parser"
+  ],
+  "author": "Liu Yue",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hangxingliu/node-verb-uri/issues"
+  },
+  "homepage": "https://github.com/hangxingliu/node-verb-uri#readme"
+}
