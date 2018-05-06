@@ -12,8 +12,8 @@ describe('stringify', () => {
 
 		Assert(stringify('VERSION-CONTROL', 'https://test.test/api/books'))
 			.equals('VERSION-CONTROL https://test.test/api/books');
-		
-		
+
+
 		Assert(stringify('GET ', '/api/books')).equals('GET /api/books');
 		Assert(stringify(' GET', '/api/books')).equals('GET /api/books');
 		Assert(stringify(' GET ', '/api/books')).equals('GET /api/books');
@@ -38,7 +38,7 @@ describe('stringify', () => {
 			.equals('GET https://test.test/api/books');
 		Assert(stringify('get', 'https://test.test/api/books', options))
 			.equals('get https://test.test/api/books');
-		
+
 		Assert(stringify('Get ', '/api/books', options)).equals('Get /api/books');
 		Assert(stringify(' get', '/api/books', options)).equals('get /api/books');
 		Assert(stringify(' GET ', '/api/books', options)).equals('GET /api/books');

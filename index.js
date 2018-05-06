@@ -12,12 +12,12 @@
 
 //@ts-check
 /**
- * 
- * @param {string} verbURI 
- * @param {{keepCase?: boolean; defaultVerb?: string}} [options] 
+ *
+ * @param {string} verbURI
+ * @param {{keepCase?: boolean; defaultVerb?: string}} [options]
  * @returns {{verb: string; uri: string}}
  */
-function parse(verbURI, options) { 
+function parse(verbURI, options) {
 	if (!options)
 		options = {};
 	options = Object.assign({ keepCase: false, defaultVerb: 'GET' }, options);
@@ -38,25 +38,25 @@ function parse(verbURI, options) {
 }
 
 /**
- * 
- * @param {string} verb 
- * @param {string} uri 
- * @param {{keepCase?: boolean; defaultVerb?: string}} [options] 
+ *
+ * @param {string} verb
+ * @param {string} uri
+ * @param {{keepCase?: boolean; defaultVerb?: string}} [options]
  * @returns {string}
  */
-function stringify(verb, uri, options) { 
+function stringify(verb, uri, options) {
 	if (!options)
 		options = {};
 	options = Object.assign({ keepCase: false, defaultVerb: 'GET' }, options);
-	
+
 	uri = uri.replace(/^\s+/, '');
 
 	if (typeof verb === 'string')
 		verb = verb.trim();
-	
+
 	if (!verb)
 		verb = options.defaultVerb;
-	
+
 	if (typeof verb === 'string') {
 		verb = verb.trim();
 		if (!options.keepCase)

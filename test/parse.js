@@ -28,12 +28,12 @@ describe('parse', () => {
 		Assert(parse('/api/books', options)).fieldsEqual({ verb: 'GET', uri: '/api/books' });
 		Assert(parse('get /api/books', options)).fieldsEqual({ verb: 'get', uri: '/api/books' });
 		Assert(parse('GeT /api/books', options)).fieldsEqual({ verb: 'GeT', uri: '/api/books' });
-		
+
 		Assert(parse('http://test.test/api/books', options))
 			.fieldsEqual({ verb: 'GET', uri: 'http://test.test/api/books' });
-		
+
 		Assert(parse('http://test.test/api/books', { ...options, defaultVerb: 'post' }))
 			.fieldsEqual({ verb: 'post', uri: 'http://test.test/api/books' });
 	});
-	
+
 });
