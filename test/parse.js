@@ -32,7 +32,7 @@ describe('parse', () => {
 		Assert(parse('http://test.test/api/books', options))
 			.fieldsEqual({ verb: 'GET', uri: 'http://test.test/api/books' });
 
-		Assert(parse('http://test.test/api/books', { ...options, defaultVerb: 'post' }))
+		Assert(parse('http://test.test/api/books', Object.assign({}, options, { defaultVerb: 'post' })))
 			.fieldsEqual({ verb: 'post', uri: 'http://test.test/api/books' });
 	});
 

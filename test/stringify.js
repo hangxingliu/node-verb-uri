@@ -48,8 +48,11 @@ describe('stringify', () => {
 		Assert(stringify(null, '/api/books', options)).equals('GET /api/books');
 		Assert(stringify(undefined, '/api/books', options)).equals('GET /api/books');
 
-		Assert(stringify('', '/api/books', { ...options, defaultVerb: 'post' })).equals('post /api/books');
-		Assert(stringify(null, '/api/books', { ...options, defaultVerb: null })).equals('/api/books');
-		Assert(stringify(undefined, '/api/books', { ...options, defaultVerb: ' ' })).equals('/api/books');
+		Assert(stringify('', '/api/books', Object.assign({}, options, { defaultVerb: 'post' })))
+			.equals('post /api/books');
+		Assert(stringify(null, '/api/books', Object.assign({}, options, { defaultVerb: null })))
+			.equals('/api/books');
+		Assert(stringify(undefined, '/api/books', Object.assign({}, options, { defaultVerb: ' ' })))
+			.equals('/api/books');
 	});
 });
